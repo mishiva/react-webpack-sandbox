@@ -1,5 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var path = require('path');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
   context: __dirname + '/app',
@@ -19,7 +20,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("styles.css"),
+    new OpenBrowserPlugin({ url: 'http://localhost:8080' })
   ]
 
 };
