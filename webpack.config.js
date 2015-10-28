@@ -17,6 +17,7 @@ module.exports = {
       { test: /\.jsx?$/, loader: 'babel', exclude: /node_modules/},
       { test: /\.jade$/, loader: "jade-loader" },
       { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+      { test: /\.sass$/, loader: ExtractTextPlugin.extract("style-loader", "css!sass?indentedSyntax=true&sourceMap=true") }
     ]
   },
   plugins: [

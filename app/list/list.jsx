@@ -1,5 +1,5 @@
 var React = require('react');
-import './list.css';
+import './list.sass';
 
 var List = React.createClass({
   getInitialState() {
